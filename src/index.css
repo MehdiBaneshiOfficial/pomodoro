@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes timer-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes progress-pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Custom utility classes */
+.timer-pulse {
+  animation: timer-pulse 300ms ease-in-out;
+}
+
+.progress-pulse {
+  animation: progress-pulse 300ms ease-in-out;
+}
+
+.animate-modal-in {
+  animation: modal-in 200ms ease-out forwards;
+}
+
+.pulse-animation {
+  animation: pulse-animation 2s infinite ease-in-out;
+}
+
+/* Dark mode background color not covered by Tailwind */
+.dark\:bg-gray-750 {
+  @apply dark:bg-gray-800/70;
+}
+
+/* Customize range input appearance */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #e2e8f0;
+  border-radius: 0.25rem;
+  height: 0.5rem;
+}
+
+.dark input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #4b5563;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -4px;
+  background-color: #6366f1;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid rgba(99, 102, 241, 0.3);
+  outline-offset: 0.125rem;
+}
+
+input[type="range"].accent-emerald-600::-webkit-slider-thumb {
+  background-color: #059669;
+}
+
+input[type="range"].accent-sky-600::-webkit-slider-thumb {
+  background-color: #0284c7;
+}
