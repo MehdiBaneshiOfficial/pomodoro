@@ -33,6 +33,7 @@ const TimerControls: React.FC<TimerControlsProps> = ({
             p-3 rounded-full bg-gray-200 hover:bg-gray-300 
             text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200
             transition-all duration-200 transform active:scale-95
+            flex items-center justify-center
           "
           aria-label="Reset Timer"
         >
@@ -48,10 +49,12 @@ const TimerControls: React.FC<TimerControlsProps> = ({
             text-white
             transition-all duration-200 transform active:scale-95
             shadow-md
+            flex items-center justify-center
+            w-16 h-16
           "
           aria-label={isRunning ? "Pause Timer" : "Start Timer"}
         >
-          {isRunning ? <Pause size={36} /> : <Play size={36} />}
+          {isRunning ? <Pause size={32} /> : <Play size={32} className="ml-1" />}
         </button>
         
         {/* Skip button */}
@@ -61,6 +64,7 @@ const TimerControls: React.FC<TimerControlsProps> = ({
             p-3 rounded-full bg-gray-200 hover:bg-gray-300 
             text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200
             transition-all duration-200 transform active:scale-95
+            flex items-center justify-center
           "
           aria-label="Skip to Next Session"
         >

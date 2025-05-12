@@ -13,27 +13,6 @@ const TimerDisplay: React.FC = () => {
   const { currentTask } = useTask();
   const timerRef = useRef<HTMLDivElement>(null);
 
-  // Animation effect when timer changes
-  useEffect(() => {
-    if (timerRef.current) {
-      timerRef.current.classList.add('timer-pulse');
-      const timer = setTimeout(() => {
-        if (timerRef.current) {
-          timerRef.current.classList.remove('timer-pulse');
-        }
-      }, 300);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [displayTime]);
-
-  // Define the color for each mode
-  const modeColors = {
-    focus: 'from-indigo-500 to-indigo-700',
-    shortBreak: 'from-emerald-400 to-emerald-600',
-    longBreak: 'from-sky-400 to-sky-600'
-  };
-
   // Define the mode labels
   const modeLabels = {
     focus: 'Focus Time',
@@ -74,6 +53,7 @@ const TimerDisplay: React.FC = () => {
           bg-white dark:bg-gray-800
           shadow-lg
           transition-all duration-300
+          ${isRunning ? 'timer-glow' : ''}
         `}
       >
         {/* Progress circle */}
@@ -106,7 +86,7 @@ const TimerDisplay: React.FC = () => {
         <div 
           className={`
             text-6xl font-bold z-10
-            ${isRunning ? 'pulse-animation' : ''}
+            ${isRunning ? 'timer-breathe' : ''}
             ${currentMode === 'focus' 
               ? 'text-indigo-700 dark:text-indigo-300' 
               : currentMode === 'shortBreak' 

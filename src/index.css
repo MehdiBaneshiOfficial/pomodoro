@@ -3,15 +3,14 @@
 @tailwind utilities;
 
 /* Custom animations */
-@keyframes timer-pulse {
-  0% {
+@keyframes timer-breathe {
+  0%, 100% {
+    opacity: 1;
     transform: scale(1);
   }
   50% {
-    transform: scale(1.03);
-  }
-  100% {
-    transform: scale(1);
+    opacity: 0.95;
+    transform: scale(0.98);
   }
 }
 
@@ -38,21 +37,13 @@
   }
 }
 
-@keyframes pulse-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
+/* Custom utility classes */
+.timer-breathe {
+  animation: timer-breathe 4s infinite ease-in-out;
 }
 
-/* Custom utility classes */
-.timer-pulse {
-  animation: timer-pulse 300ms ease-in-out;
+.timer-glow {
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.2);
 }
 
 .progress-pulse {
@@ -61,10 +52,6 @@
 
 .animate-modal-in {
   animation: modal-in 200ms ease-out forwards;
-}
-
-.pulse-animation {
-  animation: pulse-animation 2s infinite ease-in-out;
 }
 
 /* Dark mode background color not covered by Tailwind */

@@ -18,14 +18,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </main>
         <footer className="text-center py-4 text-gray-600 dark:text-gray-400">
           <p className="text-sm">
-            Created by Mehdi Baneshi{' '}
             <a 
-              href="https://github.com/mrDiban/pomodoro" 
+              href="https://github.com/MehdiBaneshiOfficial/pomodoro" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-indigo-600 dark:text-indigo-400 hover:underline"
             >
               Open source
+            </a>
+            , created by{' '}
+            <a 
+              href="https://github.com/MehdiBaneshiOfficial" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-indigo-600 dark:text-indigo-400 hover:underline"
+            >
+              Mehdi Baneshi
             </a>
           </p>
         </footer>

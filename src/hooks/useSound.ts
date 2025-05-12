@@ -13,17 +13,17 @@ export default function useSound() {
   const getSoundUrl = (type: SoundType): string => {
     switch (type) {
       case 'timerComplete':
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3';
+        return 'https://raw.githubusercontent.com/freeCodeCamp/cdn/main/build/testable-projects-fcc/audio/BeepSound.mp3';
       case 'timerStart':
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-mouse-click-close-1113.mp3';
+        return 'https://raw.githubusercontent.com/rafaelreis-hotmart/Audio-Sample-files/master/sample.mp3';
       case 'timerPause':
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-interface-click-1126.mp3';
+        return 'https://raw.githubusercontent.com/rafaelreis-hotmart/Audio-Sample-files/master/sample2.mp3';
       case 'timerReset':
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-plastic-bubble-click-1124.mp3';
+        return 'https://raw.githubusercontent.com/rafaelreis-hotmart/Audio-Sample-files/master/sample3.mp3';
       case 'timerSkip':
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-fast-small-sweep-transition-166.mp3';
+        return 'https://raw.githubusercontent.com/rafaelreis-hotmart/Audio-Sample-files/master/sample4.mp3';
       default:
-        return 'https://assets.mixkit.co/sfx/preview/mixkit-interface-click-1126.mp3';
+        return 'https://raw.githubusercontent.com/rafaelreis-hotmart/Audio-Sample-files/master/sample.mp3';
     }
   };
 
